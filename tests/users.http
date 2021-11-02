@@ -1,0 +1,30 @@
+###
+# Users API index
+GET http://localhost:3000/users
+
+###
+# Get specific user
+GET http://localhost:3000/users/somebody
+
+### 
+# Search a user
+GET http://localhost:3000/users
+		?name=some
+
+###
+# Create a user
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "name": "sample",
+    "message": "This is not my message"
+}
+
+### Edit a user message
+PATCH http://localhost:3000/users/somebody HTTP/1.1
+content-type: application/json
+
+{
+    "message": "This is somebody's my message"
+}
