@@ -137,4 +137,34 @@ router.patch("/:name", (req, res) => {
   }
 });
 
+// @route   DELETE /user/:id
+// @desc    Delete a user
+// @access  Public
+router.delete("/:name", (req, res) => {
+  const name = req.params.name; // get the id from the params
+
+  if (name) {
+    // if the name is not empty
+    try {
+      fs.unlinkSync(`./data/users/${name}.json`); // delete the user from the data folder
+      return res.json({
+        // return a success message
+        message: "User deleted",
+      });
+    } catch (error) {
+      // if the user is not found
+      return res.json({
+        // return an error
+        error: "User not found",
+      });
+    }
+  } else {
+    // if the name is empty
+    return res.json({
+      // return an error
+      error: "Please enter a name",
+    });
+  }
+});
+
 module.exports = router;

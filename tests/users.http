@@ -21,10 +21,16 @@ content-type: application/json
     "message": "This is not my message"
 }
 
-### Edit a user message
+### 
+# Edit a user message
 PATCH http://localhost:3000/users/somebody HTTP/1.1
 content-type: application/json
 
 {
     "message": "This is somebody's my message"
 }
+
+###
+# Delete a user
+DELETE http://localhost:3000/users/sample HTTP/1.1
+
