@@ -1,0 +1,20 @@
+###
+# Index api call
+GET http://localhost:3000/
+
+###
+# Query params
+GET http://localhost:3000/query?name=Croissant
+
+###
+# URL params
+GET http://localhost:3000/url/CroissantUser
+
+###
+# POST example
+POST http://localhost:3000/
+Content-Type: application/json
+
+{
+	"name": "Croissant"
+}

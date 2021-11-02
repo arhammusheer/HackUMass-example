@@ -25,4 +25,10 @@ router.get("/url/:name", (req, res) => {
   res.send(`Hello ${params.name}!`);
 });
 
+// POST example
+router.post("/", (req, res) => {
+  const body = req.body;
+  res.send(`Hello ${body.name}!`);
+});
+
 module.exports = router;
