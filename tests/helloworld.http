@@ -1,0 +1,16 @@
+###
+# Root API index
+GET http://localhost:3000/
+
+###
+# Users API index
+GET http://localhost:3000/users
+
+###
+# Get specific user
+GET http://localhost:3000/users/somebody
+
+### 
+# Search a user
+GET http://localhost:3000/users
+		?name=some
