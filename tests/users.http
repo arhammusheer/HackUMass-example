@@ -1,5 +1,5 @@
 ###
-# Users API index
+# Get All Users
 GET http://localhost:3000/users
 
 ###
