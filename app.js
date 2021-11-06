@@ -14,7 +14,7 @@ app.use("/", indexRouter); // home API
 app.use("/users", userRouter); // user API
 
 app.use(express.static("public")); // serve static files from the public folder
-app.use("/tester", express.static("./react-tester/build")); // serve static files from the public folder
-app.listen(PORT, () => { // listen on port 3000 or the port specified in the environment variables
-  console.log(`Server started on port ${PORT}`); 
+app.listen(PORT, () => {
+  // listen on port 3000 or the port specified in the environment variables
+  console.log(`Server started on port ${PORT}`);
 });
