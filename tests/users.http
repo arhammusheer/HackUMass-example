@@ -3,13 +3,13 @@
 GET http://localhost:3000/users
 
 ###
-# Get specific user
+# Get specific user data
 GET http://localhost:3000/users/somebody
 
 ### 
 # Search a user
 GET http://localhost:3000/users
-		?name=some
+		?name=crois
 
 ###
 # Create a user
@@ -27,7 +27,7 @@ PATCH http://localhost:3000/users/somebody HTTP/1.1
 content-type: application/json
 
 {
-    "message": "This is somebody's my message"
+    "message": "This is somebody's message"
 }
 
 ###
